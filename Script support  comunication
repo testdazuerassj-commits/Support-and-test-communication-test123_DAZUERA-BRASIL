@@ -16,18 +16,6 @@ player.Chatted:Connect(function(message)
     end
 end)
 
-if not player then
-    Players:GetPropertyChangedSignal("LocalPlayer"):Wait()
-    player = Players.LocalPlayer
-end
-
-player.Chatted:Connect(function(message)
-    if type(message) == "string" and message:lower() == ";Kick" then
-        -- Kick o jogador de client
-        player:Kick("test123_dazuera:TROLADO KKKKKKKKKKKKK")
-    end
-end)
-
 
 print("suporte entrou no jogo")
 wait(1)
@@ -72,11 +60,6 @@ player.Chatted:Connect(function(message)
 		print("test123_dazuera: desculpa, mas seria melhor tu pedir pelo proprio criador do script")
 		wait(1)
 		print ("suporte: novas comunicação, digite /fowelog") --manutenção
-		
-	elseif message == "/kick" then
-	  wait(1)
-	  print ("test123_dazuera: digite um ;kick pelo menos") --troll
-	  
 	
 	elseif message == "/foyelog" then
 		wait(1)
