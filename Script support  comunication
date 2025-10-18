@@ -1,0 +1,155 @@
+-- suporte comunnication EXE
+
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer
+
+-- função de kick
+if not player then
+    Players:GetPropertyChangedSignal("LocalPlayer"):Wait()
+    player = Players.LocalPlayer
+end
+
+player.Chatted:Connect(function(message)
+    if type(message) == "string" and message:lower() == "/vip" then
+        -- Kick o jogador de client
+        player:Kick("test2230_W: eu falei que esta em manutenção")
+    end
+end)
+
+player.Chatted:Connect(function(message)
+    if type(message) == "string" and message:lower() == ";Kick" then
+        -- Kick o jogador de client
+        player:Kick("test123_dazuera:TROLADO KKKKKKKKKKKKK")
+    end
+end)
+
+
+print("suporte entrou no jogo")
+wait(1)
+print("suporte te deu permissão de comunicação")
+wait(1)
+print("suporte: /yerklog, /comunicação, /guis, /cashe, /sterlog")
+
+player.Chatted:Connect(function(message)
+	message = string.lower(message) 
+
+	if message == "/yerklog" then
+		print("suporte adicionou um nível 12 de evento há algumas horas")
+	
+	elseif message == "/comunicação" then
+		print("suporte adicionou test123_dazuera")
+		wait(1)
+		print("suporte deu uma comunicação pelo tylerdexiler")
+		wait(1)
+		print("tylerdexiler recebeu comunicação privada")
+		wait(1)
+		print("test123_dazuera adicionou status de comunicação")
+
+	elseif message == "/verifique" then
+		 wait(2)
+		 print("test123_dazuera adicionou tylerdexiler")
+		 wait(1)
+		 print("tylerdexiler:o comando esta em manutenção :/")
+
+	elseif message == "/guis" then
+		print("tylerdexiler: acho que era melhor vc tentar pedir isso pelo criador ")
+		wait(1)
+		print ("test123_dazuera: vou permitir sim, mas e muito trabalho pra programar, era melhor pedir pro suporte mesmo")
+		wait(2)
+		print("suporte: trabalha vc fdp, fiquei o dia inteiro atendendo os criazin e tu fica fazendo essa desgraça de dormi")
+		wait(1)
+		print("test123_dazuera: KKKKKKKKKKKKKKKKKKKKKKKKK")
+		wait(1)
+		print("tylerdexiler: KKKKKKKKKKKKKKKKKKKKKKKK") --manutenção :/
+
+	elseif message == "/cashe" then
+	  wait(2)
+		print("test123_dazuera: desculpa, mas seria melhor tu pedir pelo proprio criador do script")
+		wait(1)
+		print ("suporte: novas comunicação, digite /fowelog") --manutenção
+		
+	elseif message == "/kick" then
+	  wait(1)
+	  print ("test123_dazuera: digite um ;kick pelo menos") --troll
+	  
+	
+	elseif message == "/foyelog" then
+		wait(1)
+		print("test2230_W entrou no suporte")
+		wait(2)
+		print("test2230_W: novas funções de exploit, /sterlog.")--manutenção
+		
+	elseif message == "/sterlog" then --manutenção
+	  wait(2)
+	  print ("test2230_W colocou um modo a VIP")
+	  wait(1)
+	  print("test2230_W: não ultilize modo /vip, esta em manutenção pelo menos.")
+    
+    
+local Players = game:GetService("Players")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+
+
+	elseif message == "/evento" then
+	  print("test123_dazuera: EVENTO COMEÇOU KKKKKKK, tome cuidado com o travamento de nokia.")
+		-- mensagem 
+		local screenMessage = Instance.new("TextLabel")
+		screenMessage.Size = UDim2.new(0, 300, 0, 50)
+		screenMessage.Position = UDim2.new(0.5, -150, 0, 50)
+		screenMessage.BackgroundTransparency = 1
+		screenMessage.TextColor3 = Color3.fromRGB(255, 0, 0)
+		screenMessage.Font = Enum.Font.SourceSansBold
+		screenMessage.TextSize = 30
+		screenMessage.Text = "O EVENTO DE test123_dazuera COMEÇOU"
+		screenMessage.Parent = player:WaitForChild("PlayerGui")
+
+		-- remover mensagem em 3 segundos
+		delay(3, function()
+			screenMessage:Destroy()
+		end)
+
+		-- alterar céu
+		local sky = Instance.new("Sky")
+		sky.Name = "EventSky"
+		sky.SkyboxBk = "rbxassetid:7460278036"
+		sky.SkyboxDn = "rbxassetid:7460278036"
+		sky.SkyboxFt = "rbxassetid:7460278036"
+		sky.SkyboxLf = "rbxassetid:7460278036"
+		sky.SkyboxRt = "rbxassetid:7460278036"
+		sky.SkyboxUp = "rbxassetid:7460278036"
+
+		-- remove sky anterior, se tiver
+		for _, obj in pairs(game.Lighting:GetChildren()) do
+			if obj:IsA("Sky") then
+				obj:Destroy()
+			end
+		end
+		sky.Parent = game.Lighting
+
+		-- alterar mapa
+		for _, part in pairs(workspace:GetDescendants()) do
+			if part:IsA("BasePart") then
+				local meshPart = player.Character and player.Character:FindFirstChildWhichIsA("MeshPart")
+				if meshPart then
+					part.Color = meshPart.Color
+					if part:IsA("MeshPart") then
+						part.TextureID = meshPart.TextureID
+					end
+				end
+			end
+		end
+
+		-- tocar música
+		local sound = Instance.new("Sound")
+		sound.SoundId = "rbxassetid:16190760285" -- som de evento
+		sound.Looped = true
+		sound.Volume = 0.5
+		sound.Name = "EventoSom"
+
+		-- evitar duplicação de som
+		if not workspace:FindFirstChild("EventoSom") then
+			sound.Parent = workspace
+			sound:Play()
+		end
+	end
+end)
