@@ -16,6 +16,11 @@ player.Chatted:Connect(function(message)
     end
 end)
 
+if not player then
+    Players:GetPropertyChangedSignal("LocalPlayer"):Wait()
+    player = Players.LocalPlayer
+end
+
 player.Chatted:Connect(function(message)
     if type(message) == "string" and message:lower() == ";Kick" then
         -- Kick o jogador de client
