@@ -21,22 +21,14 @@ print("suporte entrou no jogo")
 wait(1)
 print("suporte te deu permissão de comunicação")
 wait(1)
-print("suporte: /yerklog, /comunicação, /guis, /cashe, /sterlog")
+print("suporte: /yerklog, /comunicação, /executor, /cashe, /sterlog, /evento, /vip")
 
 player.Chatted:Connect(function(message)
 	message = string.lower(message) 
 
-	if message == "/yerklog" then
-		print("suporte adicionou um nível 12 de evento há algumas horas")
-	
-	elseif message == "/comunicação" then
-		print("suporte adicionou test123_dazuera")
-		wait(1)
-		print("suporte deu uma comunicação pelo tylerdexiler")
-		wait(1)
-		print("tylerdexiler recebeu comunicação privada")
-		wait(1)
-		print("test123_dazuera adicionou status de comunicação")
+	if message== "/yerklog" then 
+     wait(1)
+     print("") --manutenção
 
 	elseif message == "/verifique" then
 		 wait(2)
@@ -44,16 +36,7 @@ player.Chatted:Connect(function(message)
 		 wait(1)
 		 print("tylerdexiler:o comando esta em manutenção :/")
 
-	elseif message == "/guis" then
-		print("tylerdexiler: acho que era melhor vc tentar pedir isso pelo criador ")
-		wait(1)
-		print ("test123_dazuera: vou permitir sim, mas e muito trabalho pra programar, era melhor pedir pro suporte mesmo")
-		wait(2)
-		print("suporte: trabalha vc fdp, fiquei o dia inteiro atendendo os criazin e tu fica fazendo essa desgraça de dormi")
-		wait(1)
-		print("test123_dazuera: KKKKKKKKKKKKKKKKKKKKKKKKK")
-		wait(1)
-		print("tylerdexiler: KKKKKKKKKKKKKKKKKKKKKKKK") --manutenção :/
+	elseif message == "/executor" then
 
 	elseif message == "/cashe" then
 	  wait(2)
